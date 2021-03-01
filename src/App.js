@@ -5,7 +5,7 @@ function App() {
   const getMode = () => {
     return JSON.parse(localStorage.getItem("darkmode")) || false;
   };
-  const [darkMode, setMode] = useState(getMode());
+  const [darkMode, setMode] = useState(getMode()); // darkMode and setMode was confusing
 
   useEffect(() => {
     localStorage.setItem("darkmode", JSON.stringify(darkMode));
